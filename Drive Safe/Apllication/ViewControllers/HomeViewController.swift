@@ -18,6 +18,8 @@ class HomeViewController: UIViewController {
         return ARFaceTrackingConfiguration.isSupported
     }()
     
+    var userDefaults: UserDefaultsProtocol = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,7 +32,7 @@ class HomeViewController: UIViewController {
 
     @IBAction func secondsForEyesClosedLimitEditingChanged(_ sender: Any) {
         if let secondsTxt = secondsEyesClosedLimitTextField.text, let seconds = Int(secondsTxt) {
-            UserDefaults.standard.set(seconds, forKey: DriveSafeConfig.SHARED_PREF_EYECLOSED_SECONDS_LIMIT)
+            userDefaults.set(seconds, forKey: DriveSafeConfig.SHARED_PREF_EYECLOSED_SECONDS_LIMIT)
         }
         hideKeyboard()
     }

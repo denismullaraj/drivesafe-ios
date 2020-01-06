@@ -11,17 +11,21 @@ import XCTest
 
 class HomeViewControllerTest: XCTestCase {
     
-    var sut: HomeViewController!
+    private var sut: HomeViewController!
+    private var mockUserDefaults: MockUserDefaults!
     
     override func setUp() {
         super.setUp()
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
         sut = sb.instantiateViewController(withIdentifier: String(describing: HomeViewController.self)) as? HomeViewController
+        mockUserDefaults = MockUserDefaults()
+        sut.userDefaults = mockUserDefaults
     }
     
     override func tearDown() {
         sut = nil
+        mockUserDefaults = nil
         
         super.tearDown()
     }
@@ -58,5 +62,11 @@ class HomeViewControllerTest: XCTestCase {
         
         XCTAssertEqual(alertVerifier.presentedCount, 0)
     }
-
+    
+    func test_settingSecondsTo3_store3AsUserDefaultSeconds() {
+        sut.loadViewIfNeeded()
+        
+        sut.secondsEyesClosedLimitTextField.insertText("3")
+        XCTAssertEqual(mockUserDefaults.integer(forKey: DriveSafeConfig.SHARED_PREF_EYECLOSED_SECONDS_LIMIT), 3)
+    }
 }

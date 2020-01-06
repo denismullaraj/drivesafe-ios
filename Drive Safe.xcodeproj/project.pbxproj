@@ -29,6 +29,9 @@
 		92EDCEEC23C39930003396DB /* QCOMockPopoverPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEE123C39930003396DB /* QCOMockPopoverPresentationController.m */; };
 		92EDCEED23C39930003396DB /* DismissalVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEE223C39930003396DB /* DismissalVerifier.swift */; };
 		92EDCEEE23C39930003396DB /* ClosureContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEE323C39930003396DB /* ClosureContainer.swift */; };
+		92EDCEF323C3A137003396DB /* UserDefaultsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEF223C3A137003396DB /* UserDefaultsProtocol.swift */; };
+		92EDCEF523C3A143003396DB /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEF423C3A143003396DB /* UserDefaults+Ext.swift */; };
+		92EDCEF723C3A2A3003396DB /* MockUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEF623C3A2A3003396DB /* MockUserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,9 @@
 		92EDCEE223C39930003396DB /* DismissalVerifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissalVerifier.swift; sourceTree = "<group>"; };
 		92EDCEE323C39930003396DB /* ClosureContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureContainer.swift; sourceTree = "<group>"; };
 		92EDCEF023C39999003396DB /* Drive_SafeTests-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Drive_SafeTests-Bridging-header.h"; sourceTree = "<group>"; };
+		92EDCEF223C3A137003396DB /* UserDefaultsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProtocol.swift; sourceTree = "<group>"; };
+		92EDCEF423C3A143003396DB /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
+		92EDCEF623C3A2A3003396DB /* MockUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,7 @@
 		92EDCEB423C38F24003396DB /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				92EDCEF123C3A127003396DB /* UserDefaults */,
 				92EDCEB623C38F50003396DB /* MessageAlertController.swift */,
 			);
 			path = Util;
@@ -234,8 +241,18 @@
 			isa = PBXGroup;
 			children = (
 				92EDCED223C39930003396DB /* ViewControllerPresentationSpy */,
+				92EDCEF623C3A2A3003396DB /* MockUserDefaults.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		92EDCEF123C3A127003396DB /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				92EDCEF223C3A137003396DB /* UserDefaultsProtocol.swift */,
+				92EDCEF423C3A143003396DB /* UserDefaults+Ext.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +362,8 @@
 				926C745C23C36B9900EA3E0F /* HomeViewController.swift in Sources */,
 				92EDCEBE23C391F6003396DB /* KeepEyesOpenViewController.swift in Sources */,
 				92EDCEBA23C38FCE003396DB /* SingleCharUITextField.swift in Sources */,
+				92EDCEF523C3A143003396DB /* UserDefaults+Ext.swift in Sources */,
+				92EDCEF323C3A137003396DB /* UserDefaultsProtocol.swift in Sources */,
 				92EDCEB723C38F50003396DB /* MessageAlertController.swift in Sources */,
 				926C745A23C36B9900EA3E0F /* AppDelegate.swift in Sources */,
 			);
@@ -356,6 +375,7 @@
 			files = (
 				92EDCEE823C39930003396DB /* AlertVerifier.swift in Sources */,
 				92EDCEE423C39930003396DB /* UIAlertAction+QCOMock.m in Sources */,
+				92EDCEF723C3A2A3003396DB /* MockUserDefaults.swift in Sources */,
 				92EDCEEB23C39930003396DB /* UIViewController+QCOMock.m in Sources */,
 				92EDCEED23C39930003396DB /* DismissalVerifier.swift in Sources */,
 				92EDCEEE23C39930003396DB /* ClosureContainer.swift in Sources */,
