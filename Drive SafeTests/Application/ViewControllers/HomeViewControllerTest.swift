@@ -48,5 +48,15 @@ class HomeViewControllerTest: XCTestCase {
                 .default("OK")
             ])
     }
+    
+    func test_faceTrackingIsSupported_warningIsNotShown() {
+        sut.isFaceTrackingSupported = true
+        
+        let alertVerifier = AlertVerifier()
+        
+        sut.loadViewIfNeeded()
+        
+        XCTAssertEqual(alertVerifier.presentedCount, 0)
+    }
 
 }
