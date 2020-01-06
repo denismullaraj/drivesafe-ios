@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		926C745A23C36B9900EA3E0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C745923C36B9900EA3E0F /* AppDelegate.swift */; };
-		926C745C23C36B9900EA3E0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C745B23C36B9900EA3E0F /* ViewController.swift */; };
+		926C745C23C36B9900EA3E0F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C745B23C36B9900EA3E0F /* HomeViewController.swift */; };
 		926C745F23C36B9900EA3E0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926C745D23C36B9900EA3E0F /* Main.storyboard */; };
 		926C746123C36B9B00EA3E0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926C746023C36B9B00EA3E0F /* Assets.xcassets */; };
 		926C746423C36B9B00EA3E0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926C746223C36B9B00EA3E0F /* LaunchScreen.storyboard */; };
+		92EDCEB723C38F50003396DB /* MessageAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEB623C38F50003396DB /* MessageAlertController.swift */; };
+		92EDCEBA23C38FCE003396DB /* SingleCharUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEB923C38FCE003396DB /* SingleCharUITextField.swift */; };
+		92EDCEBC23C391A5003396DB /* DriveSafeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEBB23C391A5003396DB /* DriveSafeConfig.swift */; };
+		92EDCEBE23C391F6003396DB /* KeepEyesOpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEBD23C391F6003396DB /* KeepEyesOpenViewController.swift */; };
+		92EDCEC023C39563003396DB /* alarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 92EDCEBF23C39562003396DB /* alarm.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		926C745623C36B9900EA3E0F /* Drive Safe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drive Safe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		926C745923C36B9900EA3E0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		926C745B23C36B9900EA3E0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		926C745B23C36B9900EA3E0F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		926C745E23C36B9900EA3E0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		926C746023C36B9B00EA3E0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		926C746323C36B9B00EA3E0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		926C746523C36B9B00EA3E0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92EDCEB623C38F50003396DB /* MessageAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageAlertController.swift; sourceTree = "<group>"; };
+		92EDCEB923C38FCE003396DB /* SingleCharUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCharUITextField.swift; sourceTree = "<group>"; };
+		92EDCEBB23C391A5003396DB /* DriveSafeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveSafeConfig.swift; sourceTree = "<group>"; };
+		92EDCEBD23C391F6003396DB /* KeepEyesOpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepEyesOpenViewController.swift; sourceTree = "<group>"; };
+		92EDCEBF23C39562003396DB /* alarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alarm.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,67 @@
 		926C745823C36B9900EA3E0F /* Drive Safe */ = {
 			isa = PBXGroup;
 			children = (
+				92EDCEB523C38F2A003396DB /* Apllication */,
+				92EDCEC123C3956A003396DB /* Resources */,
 				926C745923C36B9900EA3E0F /* AppDelegate.swift */,
-				926C745B23C36B9900EA3E0F /* ViewController.swift */,
-				926C745D23C36B9900EA3E0F /* Main.storyboard */,
+				92EDCEBB23C391A5003396DB /* DriveSafeConfig.swift */,
 				926C746023C36B9B00EA3E0F /* Assets.xcassets */,
-				926C746223C36B9B00EA3E0F /* LaunchScreen.storyboard */,
 				926C746523C36B9B00EA3E0F /* Info.plist */,
 			);
 			path = "Drive Safe";
+			sourceTree = "<group>";
+		};
+		92EDCEB223C38F16003396DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				92EDCEB823C38FBE003396DB /* Custom */,
+				926C746223C36B9B00EA3E0F /* LaunchScreen.storyboard */,
+				926C745D23C36B9900EA3E0F /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		92EDCEB323C38F1D003396DB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				926C745B23C36B9900EA3E0F /* HomeViewController.swift */,
+				92EDCEBD23C391F6003396DB /* KeepEyesOpenViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		92EDCEB423C38F24003396DB /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				92EDCEB623C38F50003396DB /* MessageAlertController.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		92EDCEB523C38F2A003396DB /* Apllication */ = {
+			isa = PBXGroup;
+			children = (
+				92EDCEB423C38F24003396DB /* Util */,
+				92EDCEB323C38F1D003396DB /* ViewControllers */,
+				92EDCEB223C38F16003396DB /* Views */,
+			);
+			path = Apllication;
+			sourceTree = "<group>";
+		};
+		92EDCEB823C38FBE003396DB /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				92EDCEB923C38FCE003396DB /* SingleCharUITextField.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		92EDCEC123C3956A003396DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				92EDCEBF23C39562003396DB /* alarm.wav */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +187,7 @@
 			files = (
 				926C746423C36B9B00EA3E0F /* LaunchScreen.storyboard in Resources */,
 				926C746123C36B9B00EA3E0F /* Assets.xcassets in Resources */,
+				92EDCEC023C39563003396DB /* alarm.wav in Resources */,
 				926C745F23C36B9900EA3E0F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +199,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				926C745C23C36B9900EA3E0F /* ViewController.swift in Sources */,
+				92EDCEBC23C391A5003396DB /* DriveSafeConfig.swift in Sources */,
+				926C745C23C36B9900EA3E0F /* HomeViewController.swift in Sources */,
+				92EDCEBE23C391F6003396DB /* KeepEyesOpenViewController.swift in Sources */,
+				92EDCEBA23C38FCE003396DB /* SingleCharUITextField.swift in Sources */,
+				92EDCEB723C38F50003396DB /* MessageAlertController.swift in Sources */,
 				926C745A23C36B9900EA3E0F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
