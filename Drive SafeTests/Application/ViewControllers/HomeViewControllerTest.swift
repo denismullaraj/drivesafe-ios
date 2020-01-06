@@ -10,11 +10,21 @@ import XCTest
 @testable import Drive_Safe
 
 class HomeViewControllerTest: XCTestCase {
-
-    func test_homeViewController_linkedToStorybard() {
+    
+    func test_linkedToStorybard() {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let sut = sb.instantiateViewController(withIdentifier: String(describing: HomeViewController.self))
         XCTAssertNotNil(sut)
+    }
+    
+    func test_outletsAreLinked() {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let sut = sb.instantiateViewController(withIdentifier: String(describing: HomeViewController.self)) as! HomeViewController
+        
+        sut.loadViewIfNeeded()
+        
+        XCTAssertNotNil(sut.keepMeSafeButton, "keepMeSafeButton is not linked")
+        XCTAssertNotNil(sut.secondsEyesClosedLimitTextField, "secondsEyesClosedLimitTextField is not linked")
     }
 
 }
