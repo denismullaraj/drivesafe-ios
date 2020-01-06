@@ -11,20 +11,42 @@ import XCTest
 
 class HomeViewControllerTest: XCTestCase {
     
-    func test_linkedToStorybard() {
+    var sut: HomeViewController!
+    
+    override func setUp() {
+        super.setUp()
+        
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let sut = sb.instantiateViewController(withIdentifier: String(describing: HomeViewController.self))
-        XCTAssertNotNil(sut)
+        sut = sb.instantiateViewController(withIdentifier: String(describing: HomeViewController.self)) as? HomeViewController
+    }
+    
+    override func tearDown() {
+        sut = nil
+        
+        super.tearDown()
     }
     
     func test_outletsAreLinked() {
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let sut = sb.instantiateViewController(withIdentifier: String(describing: HomeViewController.self)) as! HomeViewController
-        
         sut.loadViewIfNeeded()
         
         XCTAssertNotNil(sut.keepMeSafeButton, "keepMeSafeButton is not linked")
         XCTAssertNotNil(sut.secondsEyesClosedLimitTextField, "secondsEyesClosedLimitTextField is not linked")
+    }
+    
+    func test_faceTrackingIsNotSupported_showsWarning() {
+        sut.isFaceTrackingSupported = false
+        
+        let alertVerifier = AlertVerifier()
+        
+        sut.loadViewIfNeeded()
+        
+        alertVerifier.verify(
+            title: "Warning",
+            message: "App requires iPhone X or later in order to use Camera with TrueDepth feature",
+            animated: true,
+            actions: [
+                .default("OK")
+            ])
     }
 
 }

@@ -14,10 +14,14 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var secondsEyesClosedLimitTextField: SingleCharUITextField!
     @IBOutlet weak var keepMeSafeButton: UIButton!
     
+    var isFaceTrackingSupported: Bool = {
+        return ARFaceTrackingConfiguration.isSupported
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard ARFaceTrackingConfiguration.isSupported else {
+        guard isFaceTrackingSupported else {
             keepMeSafeButton.isEnabled = false
             MessageAlertController.displayConfirmationDialog("Warning", message: "App requires iPhone X or later in order to use Camera with TrueDepth feature", from: self)
             return

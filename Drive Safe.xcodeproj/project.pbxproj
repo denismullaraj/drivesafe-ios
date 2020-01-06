@@ -18,6 +18,17 @@
 		92EDCEBE23C391F6003396DB /* KeepEyesOpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEBD23C391F6003396DB /* KeepEyesOpenViewController.swift */; };
 		92EDCEC023C39563003396DB /* alarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 92EDCEBF23C39562003396DB /* alarm.wav */; };
 		92EDCEC923C39655003396DB /* HomeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEC823C39655003396DB /* HomeViewControllerTest.swift */; };
+		92EDCEE423C39930003396DB /* UIAlertAction+QCOMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCED523C39930003396DB /* UIAlertAction+QCOMock.m */; };
+		92EDCEE523C39930003396DB /* VerifyHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCED723C39930003396DB /* VerifyHelpers.swift */; };
+		92EDCEE623C39930003396DB /* PresentationVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCED823C39930003396DB /* PresentationVerifier.swift */; };
+		92EDCEE723C39930003396DB /* UIAlertController+QCOMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEDB23C39930003396DB /* UIAlertController+QCOMock.m */; };
+		92EDCEE823C39930003396DB /* AlertVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEDD23C39930003396DB /* AlertVerifier.swift */; };
+		92EDCEE923C39930003396DB /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 92EDCEDE23C39930003396DB /* LICENSE.txt */; };
+		92EDCEEA23C39930003396DB /* NSObject+QCOMockAlerts.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEDF23C39930003396DB /* NSObject+QCOMockAlerts.m */; };
+		92EDCEEB23C39930003396DB /* UIViewController+QCOMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEE023C39930003396DB /* UIViewController+QCOMock.m */; };
+		92EDCEEC23C39930003396DB /* QCOMockPopoverPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEE123C39930003396DB /* QCOMockPopoverPresentationController.m */; };
+		92EDCEED23C39930003396DB /* DismissalVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEE223C39930003396DB /* DismissalVerifier.swift */; };
+		92EDCEEE23C39930003396DB /* ClosureContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEE323C39930003396DB /* ClosureContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +57,24 @@
 		92EDCEC623C39655003396DB /* Drive SafeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Drive SafeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92EDCEC823C39655003396DB /* HomeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTest.swift; sourceTree = "<group>"; };
 		92EDCECA23C39655003396DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92EDCED323C39930003396DB /* ViewControllerPresentationSpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerPresentationSpy.h; sourceTree = "<group>"; };
+		92EDCED423C39930003396DB /* UIAlertController+QCOMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+QCOMock.h"; sourceTree = "<group>"; };
+		92EDCED523C39930003396DB /* UIAlertAction+QCOMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertAction+QCOMock.m"; sourceTree = "<group>"; };
+		92EDCED623C39930003396DB /* NSObject+QCOMockAlerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+QCOMockAlerts.h"; sourceTree = "<group>"; };
+		92EDCED723C39930003396DB /* VerifyHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyHelpers.swift; sourceTree = "<group>"; };
+		92EDCED823C39930003396DB /* PresentationVerifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationVerifier.swift; sourceTree = "<group>"; };
+		92EDCED923C39930003396DB /* QCOMockPopoverPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCOMockPopoverPresentationController.h; sourceTree = "<group>"; };
+		92EDCEDA23C39930003396DB /* UIViewController+QCOMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+QCOMock.h"; sourceTree = "<group>"; };
+		92EDCEDB23C39930003396DB /* UIAlertController+QCOMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+QCOMock.m"; sourceTree = "<group>"; };
+		92EDCEDC23C39930003396DB /* UIAlertAction+QCOMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertAction+QCOMock.h"; sourceTree = "<group>"; };
+		92EDCEDD23C39930003396DB /* AlertVerifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertVerifier.swift; sourceTree = "<group>"; };
+		92EDCEDE23C39930003396DB /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		92EDCEDF23C39930003396DB /* NSObject+QCOMockAlerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+QCOMockAlerts.m"; sourceTree = "<group>"; };
+		92EDCEE023C39930003396DB /* UIViewController+QCOMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+QCOMock.m"; sourceTree = "<group>"; };
+		92EDCEE123C39930003396DB /* QCOMockPopoverPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCOMockPopoverPresentationController.m; sourceTree = "<group>"; };
+		92EDCEE223C39930003396DB /* DismissalVerifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissalVerifier.swift; sourceTree = "<group>"; };
+		92EDCEE323C39930003396DB /* ClosureContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureContainer.swift; sourceTree = "<group>"; };
+		92EDCEF023C39999003396DB /* Drive_SafeTests-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Drive_SafeTests-Bridging-header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +183,9 @@
 			isa = PBXGroup;
 			children = (
 				92EDCED023C396CF003396DB /* Application */,
+				92EDCEEF23C3993D003396DB /* Util */,
 				92EDCECA23C39655003396DB /* Info.plist */,
+				92EDCEF023C39999003396DB /* Drive_SafeTests-Bridging-header.h */,
 			);
 			path = "Drive SafeTests";
 			sourceTree = "<group>";
@@ -173,6 +204,38 @@
 				92EDCEC823C39655003396DB /* HomeViewControllerTest.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		92EDCED223C39930003396DB /* ViewControllerPresentationSpy */ = {
+			isa = PBXGroup;
+			children = (
+				92EDCED323C39930003396DB /* ViewControllerPresentationSpy.h */,
+				92EDCED423C39930003396DB /* UIAlertController+QCOMock.h */,
+				92EDCED523C39930003396DB /* UIAlertAction+QCOMock.m */,
+				92EDCED623C39930003396DB /* NSObject+QCOMockAlerts.h */,
+				92EDCED723C39930003396DB /* VerifyHelpers.swift */,
+				92EDCED823C39930003396DB /* PresentationVerifier.swift */,
+				92EDCED923C39930003396DB /* QCOMockPopoverPresentationController.h */,
+				92EDCEDA23C39930003396DB /* UIViewController+QCOMock.h */,
+				92EDCEDB23C39930003396DB /* UIAlertController+QCOMock.m */,
+				92EDCEDC23C39930003396DB /* UIAlertAction+QCOMock.h */,
+				92EDCEDD23C39930003396DB /* AlertVerifier.swift */,
+				92EDCEDE23C39930003396DB /* LICENSE.txt */,
+				92EDCEDF23C39930003396DB /* NSObject+QCOMockAlerts.m */,
+				92EDCEE023C39930003396DB /* UIViewController+QCOMock.m */,
+				92EDCEE123C39930003396DB /* QCOMockPopoverPresentationController.m */,
+				92EDCEE223C39930003396DB /* DismissalVerifier.swift */,
+				92EDCEE323C39930003396DB /* ClosureContainer.swift */,
+			);
+			path = ViewControllerPresentationSpy;
+			sourceTree = "<group>";
+		};
+		92EDCEEF23C3993D003396DB /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				92EDCED223C39930003396DB /* ViewControllerPresentationSpy */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92EDCEE923C39930003396DB /* LICENSE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +354,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92EDCEE823C39930003396DB /* AlertVerifier.swift in Sources */,
+				92EDCEE423C39930003396DB /* UIAlertAction+QCOMock.m in Sources */,
+				92EDCEEB23C39930003396DB /* UIViewController+QCOMock.m in Sources */,
+				92EDCEED23C39930003396DB /* DismissalVerifier.swift in Sources */,
+				92EDCEEE23C39930003396DB /* ClosureContainer.swift in Sources */,
+				92EDCEEA23C39930003396DB /* NSObject+QCOMockAlerts.m in Sources */,
+				92EDCEE623C39930003396DB /* PresentationVerifier.swift in Sources */,
 				92EDCEC923C39655003396DB /* HomeViewControllerTest.swift in Sources */,
+				92EDCEE523C39930003396DB /* VerifyHelpers.swift in Sources */,
+				92EDCEEC23C39930003396DB /* QCOMockPopoverPresentationController.m in Sources */,
+				92EDCEE723C39930003396DB /* UIAlertController+QCOMock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,14 +556,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BZ82PGH984;
+				FRAMEWORK_SEARCH_PATHS = "./Drive\\ SafeTests/";
+				HEADER_SEARCH_PATHS = "./Drive\\ SafeTests/";
 				INFOPLIST_FILE = "Drive SafeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "./Drive\\ SafeTests/";
 				PRODUCT_BUNDLE_IDENTIFIER = "al.dmullaraj.Drive-SafeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./Drive SafeTests/Drive_SafeTests-Bridging-header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Drive Safe.app/Drive Safe";
@@ -502,14 +580,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BZ82PGH984;
+				FRAMEWORK_SEARCH_PATHS = "./Drive\\ SafeTests/";
+				HEADER_SEARCH_PATHS = "./Drive\\ SafeTests/";
 				INFOPLIST_FILE = "Drive SafeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = "./Drive\\ SafeTests/";
 				PRODUCT_BUNDLE_IDENTIFIER = "al.dmullaraj.Drive-SafeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./Drive SafeTests/Drive_SafeTests-Bridging-header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Drive Safe.app/Drive Safe";
