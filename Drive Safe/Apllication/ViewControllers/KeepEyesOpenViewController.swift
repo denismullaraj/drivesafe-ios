@@ -11,44 +11,57 @@ import ARKit
 
 class KeepEyesOpenViewController: UIViewController {
 
-    var session: ARSession!
+    //MARK: Properties
+    var session = ARSession()
     var timer : Timer!
     var seconds = 0
     
-    var limitEyeClosedInSeconds = UserDefaults.standard.integer(forKey: DriveSafeConfig.SHARED_PREF_EYECLOSED_SECONDS_LIMIT)
+    var limitEyeClosedInSeconds: Int = {
+        let driveSafeDao = DriveSafeDAOImpl()
+        return driveSafeDao.getEyeClosedLimitInSeconds()
+    }()
     
-    var avPlayer: AVAudioPlayer?
+    lazy var avPlayer: AVAudioPlayer? = {
+        do {
+            guard let path = Bundle.main.path(forResource: DriveSafeConfig.RESOURCES_AUDIO_ALARM, ofType:nil) else { fatalError("No alarm sound found!") }
+            
+            let url = URL(fileURLWithPath: path)
+            
+            return try AVAudioPlayer(contentsOf: url)
+        } catch {
+            fatalError("Audio Player couldn't be initialised!")
+        }
+    }()
     
+    
+    //MARK: ViewController lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.isTranslucent = false
-        
-        session = ARSession()
         session.delegate = self
         
-        timer = Timer()
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(KeepEyesOpenViewController.processSeconds), userInfo: nil, repeats: true)
-        
-        let path = Bundle.main.path(forResource: DriveSafeConfig.RESOURCES_AUDIO_ALARM, ofType:nil)!
-        let url = URL(fileURLWithPath: path)
-        do {
-            avPlayer = try AVAudioPlayer(contentsOf: url)
-        } catch {
-            // couldn't load file :(
-        }
         view.backgroundColor = UIColor.blue
+        navigationController?.navigationBar.isTranslucent = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        guard ARFaceTrackingConfiguration.isSupported else { fatalError("iPhone X required") }
-        
         let config = ARFaceTrackingConfiguration()
         session.run(config, options: [.resetTracking, .removeExistingAnchors])
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(processSeconds), userInfo: nil, repeats: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        timer?.invalidate()
+        timer = nil
+        seconds = 0
     }
 }
+
 
 // MARK: Face detection
 extension KeepEyesOpenViewController: ARSessionDelegate {
