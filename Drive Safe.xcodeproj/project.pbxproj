@@ -17,7 +17,18 @@
 		92EDCEBC23C391A5003396DB /* DriveSafeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEBB23C391A5003396DB /* DriveSafeConfig.swift */; };
 		92EDCEBE23C391F6003396DB /* KeepEyesOpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEBD23C391F6003396DB /* KeepEyesOpenViewController.swift */; };
 		92EDCEC023C39563003396DB /* alarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 92EDCEBF23C39562003396DB /* alarm.wav */; };
+		92EDCEC923C39655003396DB /* Drive_SafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEC823C39655003396DB /* Drive_SafeTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92EDCECB23C39655003396DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 926C744E23C36B9900EA3E0F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 926C745523C36B9900EA3E0F;
+			remoteInfo = "Drive Safe";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		926C745623C36B9900EA3E0F /* Drive Safe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drive Safe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,10 +43,20 @@
 		92EDCEBB23C391A5003396DB /* DriveSafeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveSafeConfig.swift; sourceTree = "<group>"; };
 		92EDCEBD23C391F6003396DB /* KeepEyesOpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepEyesOpenViewController.swift; sourceTree = "<group>"; };
 		92EDCEBF23C39562003396DB /* alarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alarm.wav; sourceTree = "<group>"; };
+		92EDCEC623C39655003396DB /* Drive SafeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Drive SafeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92EDCEC823C39655003396DB /* Drive_SafeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drive_SafeTests.swift; sourceTree = "<group>"; };
+		92EDCECA23C39655003396DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		926C745323C36B9900EA3E0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92EDCEC323C39655003396DB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				926C745823C36B9900EA3E0F /* Drive Safe */,
+				92EDCEC723C39655003396DB /* Drive SafeTests */,
 				926C745723C36B9900EA3E0F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				926C745623C36B9900EA3E0F /* Drive Safe.app */,
+				92EDCEC623C39655003396DB /* Drive SafeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +150,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		92EDCEC723C39655003396DB /* Drive SafeTests */ = {
+			isa = PBXGroup;
+			children = (
+				92EDCEC823C39655003396DB /* Drive_SafeTests.swift */,
+				92EDCECA23C39655003396DB /* Info.plist */,
+			);
+			path = "Drive SafeTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +179,24 @@
 			productReference = 926C745623C36B9900EA3E0F /* Drive Safe.app */;
 			productType = "com.apple.product-type.application";
 		};
+		92EDCEC523C39655003396DB /* Drive SafeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92EDCECD23C39655003396DB /* Build configuration list for PBXNativeTarget "Drive SafeTests" */;
+			buildPhases = (
+				92EDCEC223C39655003396DB /* Sources */,
+				92EDCEC323C39655003396DB /* Frameworks */,
+				92EDCEC423C39655003396DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92EDCECC23C39655003396DB /* PBXTargetDependency */,
+			);
+			name = "Drive SafeTests";
+			productName = "Drive SafeTests";
+			productReference = 92EDCEC623C39655003396DB /* Drive SafeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -159,6 +209,10 @@
 				TargetAttributes = {
 					926C745523C36B9900EA3E0F = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					92EDCEC523C39655003396DB = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 926C745523C36B9900EA3E0F;
 					};
 				};
 			};
@@ -176,6 +230,7 @@
 			projectRoot = "";
 			targets = (
 				926C745523C36B9900EA3E0F /* Drive Safe */,
+				92EDCEC523C39655003396DB /* Drive SafeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -189,6 +244,13 @@
 				926C746123C36B9B00EA3E0F /* Assets.xcassets in Resources */,
 				92EDCEC023C39563003396DB /* alarm.wav in Resources */,
 				926C745F23C36B9900EA3E0F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92EDCEC423C39655003396DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +270,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92EDCEC223C39655003396DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92EDCEC923C39655003396DB /* Drive_SafeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92EDCECC23C39655003396DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 926C745523C36B9900EA3E0F /* Drive Safe */;
+			targetProxy = 92EDCECB23C39655003396DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		926C745D23C36B9900EA3E0F /* Main.storyboard */ = {
@@ -382,6 +460,46 @@
 			};
 			name = Release;
 		};
+		92EDCECE23C39655003396DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BZ82PGH984;
+				INFOPLIST_FILE = "Drive SafeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "al.dmullaraj.Drive-SafeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Drive Safe.app/Drive Safe";
+			};
+			name = Debug;
+		};
+		92EDCECF23C39655003396DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BZ82PGH984;
+				INFOPLIST_FILE = "Drive SafeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "al.dmullaraj.Drive-SafeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Drive Safe.app/Drive Safe";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -399,6 +517,15 @@
 			buildConfigurations = (
 				926C746923C36B9B00EA3E0F /* Debug */,
 				926C746A23C36B9B00EA3E0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92EDCECD23C39655003396DB /* Build configuration list for PBXNativeTarget "Drive SafeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92EDCECE23C39655003396DB /* Debug */,
+				92EDCECF23C39655003396DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
