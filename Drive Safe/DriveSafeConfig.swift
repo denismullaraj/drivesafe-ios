@@ -15,4 +15,7 @@ struct DriveSafeConfig {
     
     // Resources
     static let RESOURCES_AUDIO_ALARM = "alarm.wav"
+    
+    // Default Settings
+    static let DEFAULT_EYECLOSED_SECONDS_LIMIT = 2
 }

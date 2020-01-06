@@ -20,6 +20,8 @@ class HomeViewController: UIViewController {
     
     var userDefaults: UserDefaultsProtocol = UserDefaults.standard
     
+    let defaultEyeClosedSecondsLimit = DriveSafeConfig.DEFAULT_EYECLOSED_SECONDS_LIMIT
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,11 +30,15 @@ class HomeViewController: UIViewController {
             MessageAlertController.displayConfirmationDialog("Warning", message: "App requires iPhone X or later in order to use Camera with TrueDepth feature", from: self)
             return
         }
+        
+        setupTextField()
     }
 
     @IBAction func secondsForEyesClosedLimitEditingChanged(_ sender: Any) {
         if let secondsTxt = secondsEyesClosedLimitTextField.text, let seconds = Int(secondsTxt) {
             userDefaults.set(seconds, forKey: DriveSafeConfig.SHARED_PREF_EYECLOSED_SECONDS_LIMIT)
+        } else {
+            userDefaults.set(DriveSafeConfig.DEFAULT_EYECLOSED_SECONDS_LIMIT, forKey: DriveSafeConfig.SHARED_PREF_EYECLOSED_SECONDS_LIMIT)
         }
         hideKeyboard()
     }
@@ -46,4 +52,12 @@ class HomeViewController: UIViewController {
         view.endEditing(true)
     }
 
+    private func setupTextField() {
+        secondsEyesClosedLimitTextField.placeholder = String(describing: defaultEyeClosedSecondsLimit)
+        
+        let storedEyeClosedSecondsLimit = userDefaults.integer(forKey: DriveSafeConfig.SHARED_PREF_EYECLOSED_SECONDS_LIMIT)
+        if  storedEyeClosedSecondsLimit != defaultEyeClosedSecondsLimit, storedEyeClosedSecondsLimit != 0 {
+            secondsEyesClosedLimitTextField.insertText(String(describing: userDefaults.integer(forKey: DriveSafeConfig.SHARED_PREF_EYECLOSED_SECONDS_LIMIT)))
+        }
+    }
 }
