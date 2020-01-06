@@ -33,6 +33,8 @@
 		92EDCEF523C3A143003396DB /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEF423C3A143003396DB /* UserDefaults+Ext.swift */; };
 		92EDCEF723C3A2A3003396DB /* MockUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEF623C3A2A3003396DB /* MockUserDefaults.swift */; };
 		92EDCEF923C3A2FD003396DB /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEF823C3A2FD003396DB /* TestHelpers.swift */; };
+		92EDCEFC23C3A513003396DB /* DriveSafeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEFB23C3A512003396DB /* DriveSafeDAO.swift */; };
+		92EDCEFE23C3A51A003396DB /* DriveSafeDAOImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEFD23C3A51A003396DB /* DriveSafeDAOImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,8 @@
 		92EDCEF423C3A143003396DB /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
 		92EDCEF623C3A2A3003396DB /* MockUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaults.swift; sourceTree = "<group>"; };
 		92EDCEF823C3A2FD003396DB /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		92EDCEFB23C3A512003396DB /* DriveSafeDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveSafeDAO.swift; sourceTree = "<group>"; };
+		92EDCEFD23C3A51A003396DB /* DriveSafeDAOImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveSafeDAOImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +169,7 @@
 		92EDCEB523C38F2A003396DB /* Apllication */ = {
 			isa = PBXGroup;
 			children = (
+				92EDCEFA23C3A508003396DB /* Data */,
 				92EDCEB423C38F24003396DB /* Util */,
 				92EDCEB323C38F1D003396DB /* ViewControllers */,
 				92EDCEB223C38F16003396DB /* Views */,
@@ -256,6 +261,15 @@
 				92EDCEF423C3A143003396DB /* UserDefaults+Ext.swift */,
 			);
 			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		92EDCEFA23C3A508003396DB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				92EDCEFB23C3A512003396DB /* DriveSafeDAO.swift */,
+				92EDCEFD23C3A51A003396DB /* DriveSafeDAOImpl.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,8 +377,10 @@
 			files = (
 				92EDCEBC23C391A5003396DB /* DriveSafeConfig.swift in Sources */,
 				926C745C23C36B9900EA3E0F /* HomeViewController.swift in Sources */,
+				92EDCEFE23C3A51A003396DB /* DriveSafeDAOImpl.swift in Sources */,
 				92EDCEBE23C391F6003396DB /* KeepEyesOpenViewController.swift in Sources */,
 				92EDCEBA23C38FCE003396DB /* SingleCharUITextField.swift in Sources */,
+				92EDCEFC23C3A513003396DB /* DriveSafeDAO.swift in Sources */,
 				92EDCEF523C3A143003396DB /* UserDefaults+Ext.swift in Sources */,
 				92EDCEF323C3A137003396DB /* UserDefaultsProtocol.swift in Sources */,
 				92EDCEB723C38F50003396DB /* MessageAlertController.swift in Sources */,

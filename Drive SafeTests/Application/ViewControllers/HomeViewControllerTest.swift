@@ -19,8 +19,9 @@ class HomeViewControllerTest: XCTestCase {
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
         sut = sb.instantiateViewController(withIdentifier: String(describing: HomeViewController.self)) as? HomeViewController
+        
         mockUserDefaults = MockUserDefaults()
-        sut.userDefaults = mockUserDefaults
+        sut.driveSafeDao.userDefaults = mockUserDefaults
     }
     
     override func tearDown() {

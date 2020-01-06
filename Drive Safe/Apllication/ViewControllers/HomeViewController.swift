@@ -14,13 +14,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var secondsEyesClosedLimitTextField: SingleCharUITextField!
     @IBOutlet weak var keepMeSafeButton: UIButton!
     
+    var driveSafeDao: DriveSafeDAO = DriveSafeDAOImpl()
+    
     var isFaceTrackingSupported: Bool = {
         return ARFaceTrackingConfiguration.isSupported
     }()
-    
-    var userDefaults: UserDefaultsProtocol = UserDefaults.standard
-    
-    let defaultEyeClosedSecondsLimit = DriveSafeConfig.DEFAULT_EYECLOSED_SECONDS_LIMIT
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,11 +33,7 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func secondsForEyesClosedLimitEditingChanged(_ sender: Any) {
-        if let secondsTxt = secondsEyesClosedLimitTextField.text, let seconds = Int(secondsTxt) {
-            userDefaults.set(seconds, forKey: DriveSafeConfig.SHARED_PREF_EYECLOSED_SECONDS_LIMIT)
-        } else {
-            userDefaults.set(DriveSafeConfig.DEFAULT_EYECLOSED_SECONDS_LIMIT, forKey: DriveSafeConfig.SHARED_PREF_EYECLOSED_SECONDS_LIMIT)
-        }
+        driveSafeDao.persistEyeClosedLimitInSeconds(from: secondsEyesClosedLimitTextField.text)
         hideKeyboard()
     }
     
@@ -53,11 +47,13 @@ class HomeViewController: UIViewController {
     }
 
     private func setupTextField() {
+        let storedEyeClosedLimitInSeconds = driveSafeDao.getEyeClosedLimitInSeconds()
+        let defaultEyeClosedSecondsLimit = driveSafeDao.getDefaultEyeClosedLimitInSeconds()
+        
         secondsEyesClosedLimitTextField.placeholder = String(describing: defaultEyeClosedSecondsLimit)
         
-        let storedEyeClosedSecondsLimit = userDefaults.integer(forKey: DriveSafeConfig.SHARED_PREF_EYECLOSED_SECONDS_LIMIT)
-        if  storedEyeClosedSecondsLimit != defaultEyeClosedSecondsLimit, storedEyeClosedSecondsLimit != 0 {
-            secondsEyesClosedLimitTextField.insertText(String(describing: userDefaults.integer(forKey: DriveSafeConfig.SHARED_PREF_EYECLOSED_SECONDS_LIMIT)))
+        if storedEyeClosedLimitInSeconds != driveSafeDao.getDefaultEyeClosedLimitInSeconds() {
+            secondsEyesClosedLimitTextField.insertText(String(describing: storedEyeClosedLimitInSeconds))
         }
     }
 }
