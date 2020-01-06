@@ -17,7 +17,7 @@
 		92EDCEBC23C391A5003396DB /* DriveSafeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEBB23C391A5003396DB /* DriveSafeConfig.swift */; };
 		92EDCEBE23C391F6003396DB /* KeepEyesOpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEBD23C391F6003396DB /* KeepEyesOpenViewController.swift */; };
 		92EDCEC023C39563003396DB /* alarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 92EDCEBF23C39562003396DB /* alarm.wav */; };
-		92EDCEC923C39655003396DB /* Drive_SafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEC823C39655003396DB /* Drive_SafeTests.swift */; };
+		92EDCEC923C39655003396DB /* HomeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEC823C39655003396DB /* HomeViewControllerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,7 @@
 		92EDCEBD23C391F6003396DB /* KeepEyesOpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepEyesOpenViewController.swift; sourceTree = "<group>"; };
 		92EDCEBF23C39562003396DB /* alarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alarm.wav; sourceTree = "<group>"; };
 		92EDCEC623C39655003396DB /* Drive SafeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Drive SafeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		92EDCEC823C39655003396DB /* Drive_SafeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drive_SafeTests.swift; sourceTree = "<group>"; };
+		92EDCEC823C39655003396DB /* HomeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTest.swift; sourceTree = "<group>"; };
 		92EDCECA23C39655003396DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,10 +153,26 @@
 		92EDCEC723C39655003396DB /* Drive SafeTests */ = {
 			isa = PBXGroup;
 			children = (
-				92EDCEC823C39655003396DB /* Drive_SafeTests.swift */,
+				92EDCED023C396CF003396DB /* Application */,
 				92EDCECA23C39655003396DB /* Info.plist */,
 			);
 			path = "Drive SafeTests";
+			sourceTree = "<group>";
+		};
+		92EDCED023C396CF003396DB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				92EDCED123C396D7003396DB /* ViewControllers */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		92EDCED123C396D7003396DB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				92EDCEC823C39655003396DB /* HomeViewControllerTest.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92EDCEC923C39655003396DB /* Drive_SafeTests.swift in Sources */,
+				92EDCEC923C39655003396DB /* HomeViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
