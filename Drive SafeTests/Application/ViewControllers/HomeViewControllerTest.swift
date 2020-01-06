@@ -69,4 +69,22 @@ class HomeViewControllerTest: XCTestCase {
         sut.secondsEyesClosedLimitTextField.insertText("3")
         XCTAssertEqual(mockUserDefaults.integer(forKey: DriveSafeConfig.SHARED_PREF_EYECLOSED_SECONDS_LIMIT), 3)
     }
+    
+    func test_tapping_EnabledKeepMeSafeButton_redirectsTo_keepEyesOpenViewController() {
+        sut.isFaceTrackingSupported = true
+        sut.loadViewIfNeeded()
+        
+        let navigation = UINavigationController(rootViewController: sut)
+        sut.keepMeSafeButton.sendActions(for: .touchUpInside)
+        
+        executeRunLoop()
+        
+        XCTAssertEqual(navigation.viewControllers.count, 2, "navigation stack")
+        
+        let lastPushedVC = navigation.viewControllers.last
+        guard (lastPushedVC as? KeepEyesOpenViewController) != nil else {
+            XCTFail("Expected KeepEyesOpenViewController, but was \(String(describing: lastPushedVC))")
+            return
+        }
+    }
 }

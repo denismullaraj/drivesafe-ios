@@ -32,6 +32,7 @@
 		92EDCEF323C3A137003396DB /* UserDefaultsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEF223C3A137003396DB /* UserDefaultsProtocol.swift */; };
 		92EDCEF523C3A143003396DB /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEF423C3A143003396DB /* UserDefaults+Ext.swift */; };
 		92EDCEF723C3A2A3003396DB /* MockUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEF623C3A2A3003396DB /* MockUserDefaults.swift */; };
+		92EDCEF923C3A2FD003396DB /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEF823C3A2FD003396DB /* TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		92EDCEF223C3A137003396DB /* UserDefaultsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProtocol.swift; sourceTree = "<group>"; };
 		92EDCEF423C3A143003396DB /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
 		92EDCEF623C3A2A3003396DB /* MockUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaults.swift; sourceTree = "<group>"; };
+		92EDCEF823C3A2FD003396DB /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,8 +242,9 @@
 		92EDCEEF23C3993D003396DB /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				92EDCED223C39930003396DB /* ViewControllerPresentationSpy */,
 				92EDCEF623C3A2A3003396DB /* MockUserDefaults.swift */,
+				92EDCEF823C3A2FD003396DB /* TestHelpers.swift */,
+				92EDCED223C39930003396DB /* ViewControllerPresentationSpy */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 				92EDCEEE23C39930003396DB /* ClosureContainer.swift in Sources */,
 				92EDCEEA23C39930003396DB /* NSObject+QCOMockAlerts.m in Sources */,
 				92EDCEE623C39930003396DB /* PresentationVerifier.swift in Sources */,
+				92EDCEF923C3A2FD003396DB /* TestHelpers.swift in Sources */,
 				92EDCEC923C39655003396DB /* HomeViewControllerTest.swift in Sources */,
 				92EDCEE523C39930003396DB /* VerifyHelpers.swift in Sources */,
 				92EDCEEC23C39930003396DB /* QCOMockPopoverPresentationController.m in Sources */,
