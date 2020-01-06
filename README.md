@@ -1,6 +1,8 @@
 # Drive Safe
 [![Build Status](https://travis-ci.com/denismullaraj/drivesafe-ios.svg?branch=master)](https://travis-ci.com/denismullaraj/drivesafe-ios)
 
+## Description
+Drive Safe is an iOS app that plays a terrific alarm when you fall asleep while driving, trying to keep you safe while you try to have fun with your trips.
 
 ## License
 
