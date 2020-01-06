@@ -1,5 +1,6 @@
-# drivesafe-ios
-Drive Safe
+# Drive Safe
+[![Build Status](https://travis-ci.com/denismullaraj/drivesafe-ios.svg?branch=master)](https://travis-ci.com/denismullaraj/drivesafe-ios)
+
 
 ## License
 
