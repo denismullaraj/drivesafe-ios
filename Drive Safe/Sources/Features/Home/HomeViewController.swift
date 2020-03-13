@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var secondsEyesClosedLimitTextField: SingleCharUITextField!
     @IBOutlet weak var keepMeSafeButton: UIButton!
     
-    var driveSafeDao: DriveSafeDAO = DriveSafeDAOImpl()
+    var settings: SettingsProtocol = Settings()
     
     var isFaceTrackingSupported: Bool = {
         return ARFaceTrackingConfiguration.isSupported
@@ -33,7 +33,7 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func secondsForEyesClosedLimitEditingChanged(_ sender: Any) {
-        driveSafeDao.persistEyeClosedLimitInSeconds(from: secondsEyesClosedLimitTextField.text)
+        settings.persistEyeClosedLimitInSeconds(from: secondsEyesClosedLimitTextField.text)
         hideKeyboard()
     }
     
@@ -47,12 +47,12 @@ class HomeViewController: UIViewController {
     }
 
     private func setupTextField() {
-        let storedEyeClosedLimitInSeconds = driveSafeDao.getEyeClosedLimitInSeconds()
-        let defaultEyeClosedSecondsLimit = driveSafeDao.getDefaultEyeClosedLimitInSeconds()
+        let storedEyeClosedLimitInSeconds = settings.getEyeClosedLimitInSeconds()
+        let defaultEyeClosedSecondsLimit = settings.getDefaultEyeClosedLimitInSeconds()
         
         secondsEyesClosedLimitTextField.placeholder = String(describing: defaultEyeClosedSecondsLimit)
         
-        if storedEyeClosedLimitInSeconds != driveSafeDao.getDefaultEyeClosedLimitInSeconds() {
+        if storedEyeClosedLimitInSeconds != settings.getDefaultEyeClosedLimitInSeconds() {
             secondsEyesClosedLimitTextField.insertText(String(describing: storedEyeClosedLimitInSeconds))
         }
     }
