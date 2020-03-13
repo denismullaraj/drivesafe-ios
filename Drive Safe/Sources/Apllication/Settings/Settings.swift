@@ -1,5 +1,5 @@
 //
-//  DriveSafeDAOImpl.swift
+//  Settings.swift
 //  Drive Safe
 //
 //  Created by Denis Mullaraj on 06/01/2020.
@@ -8,8 +8,14 @@
 
 import Foundation
 
-class DriveSafeDAOImpl: DriveSafeDAO {
-    
+protocol SettingsProtocol {
+    var userDefaults: UserDefaultsProtocol { get set }
+    func persistEyeClosedLimitInSeconds(from value: String?)
+    func getEyeClosedLimitInSeconds() -> Int
+    func getDefaultEyeClosedLimitInSeconds() -> Int
+}
+
+class Settings: SettingsProtocol {
     var userDefaults: UserDefaultsProtocol = UserDefaults.standard
     
     func persistEyeClosedLimitInSeconds(from value: String?) {

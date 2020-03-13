@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9204886623F0C1BB00DDD57F /* EyeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9204886523F0C1BB00DDD57F /* EyeDetector.swift */; };
+		921CE84F240BE4B4004DD85A /* FlickeringViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921CE84E240BE4B4004DD85A /* FlickeringViewMock.swift */; };
+		921CE851240BE570004DD85A /* FlickeringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921CE850240BE570004DD85A /* FlickeringView.swift */; };
 		926C745A23C36B9900EA3E0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C745923C36B9900EA3E0F /* AppDelegate.swift */; };
 		926C745C23C36B9900EA3E0F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C745B23C36B9900EA3E0F /* HomeViewController.swift */; };
 		926C745F23C36B9900EA3E0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926C745D23C36B9900EA3E0F /* Main.storyboard */; };
 		926C746123C36B9B00EA3E0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926C746023C36B9B00EA3E0F /* Assets.xcassets */; };
 		926C746423C36B9B00EA3E0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926C746223C36B9B00EA3E0F /* LaunchScreen.storyboard */; };
+		928386E9240ABABF0084F4CE /* AVAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928386E8240ABABE0084F4CE /* AVAudioPlayer.swift */; };
+		928386EB240ABB4F0084F4CE /* AVAudioPlayerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928386EA240ABB4F0084F4CE /* AVAudioPlayerMock.swift */; };
+		928386ED240ABD4A0084F4CE /* SettingsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928386EC240ABD4A0084F4CE /* SettingsMock.swift */; };
+		92B37D3C2401B31C00846AD9 /* KeepEyesOpenViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B37D3B2401B31C00846AD9 /* KeepEyesOpenViewControllerTest.swift */; };
 		92EDCEB723C38F50003396DB /* MessageAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEB623C38F50003396DB /* MessageAlertController.swift */; };
 		92EDCEBA23C38FCE003396DB /* SingleCharUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEB923C38FCE003396DB /* SingleCharUITextField.swift */; };
 		92EDCEBC23C391A5003396DB /* DriveSafeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEBB23C391A5003396DB /* DriveSafeConfig.swift */; };
@@ -29,12 +36,11 @@
 		92EDCEEC23C39930003396DB /* QCOMockPopoverPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEE123C39930003396DB /* QCOMockPopoverPresentationController.m */; };
 		92EDCEED23C39930003396DB /* DismissalVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEE223C39930003396DB /* DismissalVerifier.swift */; };
 		92EDCEEE23C39930003396DB /* ClosureContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEE323C39930003396DB /* ClosureContainer.swift */; };
-		92EDCEF323C3A137003396DB /* UserDefaultsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEF223C3A137003396DB /* UserDefaultsProtocol.swift */; };
-		92EDCEF523C3A143003396DB /* UserDefaults+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEF423C3A143003396DB /* UserDefaults+Ext.swift */; };
-		92EDCEF723C3A2A3003396DB /* MockUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEF623C3A2A3003396DB /* MockUserDefaults.swift */; };
+		92EDCEF323C3A137003396DB /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEF223C3A137003396DB /* UserDefaults.swift */; };
+		92EDCEF723C3A2A3003396DB /* UserDefaultsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEF623C3A2A3003396DB /* UserDefaultsMock.swift */; };
 		92EDCEF923C3A2FD003396DB /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEF823C3A2FD003396DB /* TestHelpers.swift */; };
-		92EDCEFC23C3A513003396DB /* DriveSafeDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEFB23C3A512003396DB /* DriveSafeDAO.swift */; };
-		92EDCEFE23C3A51A003396DB /* DriveSafeDAOImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEFD23C3A51A003396DB /* DriveSafeDAOImpl.swift */; };
+		92EDCEFC23C3A513003396DB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEFB23C3A512003396DB /* Settings.swift */; };
+		92EFC6F12402801900FA68B5 /* EyeDetectorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EFC6F02402801900FA68B5 /* EyeDetectorSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9204886523F0C1BB00DDD57F /* EyeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeDetector.swift; sourceTree = "<group>"; };
+		921CE84E240BE4B4004DD85A /* FlickeringViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickeringViewMock.swift; sourceTree = "<group>"; };
+		921CE850240BE570004DD85A /* FlickeringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickeringView.swift; sourceTree = "<group>"; };
 		926C745623C36B9900EA3E0F /* Drive Safe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drive Safe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		926C745923C36B9900EA3E0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		926C745B23C36B9900EA3E0F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +64,10 @@
 		926C746023C36B9B00EA3E0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		926C746323C36B9B00EA3E0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		926C746523C36B9B00EA3E0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		928386E8240ABABE0084F4CE /* AVAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioPlayer.swift; sourceTree = "<group>"; };
+		928386EA240ABB4F0084F4CE /* AVAudioPlayerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioPlayerMock.swift; sourceTree = "<group>"; };
+		928386EC240ABD4A0084F4CE /* SettingsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMock.swift; sourceTree = "<group>"; };
+		92B37D3B2401B31C00846AD9 /* KeepEyesOpenViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepEyesOpenViewControllerTest.swift; sourceTree = "<group>"; };
 		92EDCEB623C38F50003396DB /* MessageAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageAlertController.swift; sourceTree = "<group>"; };
 		92EDCEB923C38FCE003396DB /* SingleCharUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCharUITextField.swift; sourceTree = "<group>"; };
 		92EDCEBB23C391A5003396DB /* DriveSafeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveSafeConfig.swift; sourceTree = "<group>"; };
@@ -81,12 +94,11 @@
 		92EDCEE223C39930003396DB /* DismissalVerifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissalVerifier.swift; sourceTree = "<group>"; };
 		92EDCEE323C39930003396DB /* ClosureContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureContainer.swift; sourceTree = "<group>"; };
 		92EDCEF023C39999003396DB /* Drive_SafeTests-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Drive_SafeTests-Bridging-header.h"; sourceTree = "<group>"; };
-		92EDCEF223C3A137003396DB /* UserDefaultsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProtocol.swift; sourceTree = "<group>"; };
-		92EDCEF423C3A143003396DB /* UserDefaults+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Ext.swift"; sourceTree = "<group>"; };
-		92EDCEF623C3A2A3003396DB /* MockUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDefaults.swift; sourceTree = "<group>"; };
+		92EDCEF223C3A137003396DB /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		92EDCEF623C3A2A3003396DB /* UserDefaultsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsMock.swift; sourceTree = "<group>"; };
 		92EDCEF823C3A2FD003396DB /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
-		92EDCEFB23C3A512003396DB /* DriveSafeDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveSafeDAO.swift; sourceTree = "<group>"; };
-		92EDCEFD23C3A51A003396DB /* DriveSafeDAOImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveSafeDAOImpl.swift; sourceTree = "<group>"; };
+		92EDCEFB23C3A512003396DB /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		92EFC6F02402801900FA68B5 /* EyeDetectorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeDetectorSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9204885D23F0C04C00DDD57F /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				92EDCEB523C38F2A003396DB /* Apllication */,
+				9204885F23F0C07100DDD57F /* Main */,
+				9204886023F0C0BF00DDD57F /* Features */,
+				92EDCEB423C38F24003396DB /* Util */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		9204885F23F0C07100DDD57F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				926C745923C36B9900EA3E0F /* AppDelegate.swift */,
+				926C745D23C36B9900EA3E0F /* Main.storyboard */,
+				926C746523C36B9B00EA3E0F /* Info.plist */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9204886023F0C0BF00DDD57F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				9204886123F0C0FA00DDD57F /* Launch */,
+				9204886223F0C10200DDD57F /* Home */,
+				9204886323F0C11400DDD57F /* Keep Eyes Open */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		9204886123F0C0FA00DDD57F /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				926C746223C36B9B00EA3E0F /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		9204886223F0C10200DDD57F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				926C745B23C36B9900EA3E0F /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9204886323F0C11400DDD57F /* Keep Eyes Open */ = {
+			isa = PBXGroup;
+			children = (
+				92EDCEBD23C391F6003396DB /* KeepEyesOpenViewController.swift */,
+				9204886423F0C1B500DDD57F /* Detector */,
+			);
+			path = "Keep Eyes Open";
+			sourceTree = "<group>";
+		};
+		9204886423F0C1B500DDD57F /* Detector */ = {
+			isa = PBXGroup;
+			children = (
+				9204886523F0C1BB00DDD57F /* EyeDetector.swift */,
+			);
+			path = Detector;
+			sourceTree = "<group>";
+		};
+		921CE852240BE5AE004DD85A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				92EDCEB923C38FCE003396DB /* SingleCharUITextField.swift */,
+				921CE850240BE570004DD85A /* FlickeringView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		926C744D23C36B9900EA3E0F = {
 			isa = PBXGroup;
 			children = (
@@ -128,40 +213,20 @@
 		926C745823C36B9900EA3E0F /* Drive Safe */ = {
 			isa = PBXGroup;
 			children = (
-				92EDCEB523C38F2A003396DB /* Apllication */,
+				9204885D23F0C04C00DDD57F /* Sources */,
 				92EDCEC123C3956A003396DB /* Resources */,
-				926C745923C36B9900EA3E0F /* AppDelegate.swift */,
 				92EDCEBB23C391A5003396DB /* DriveSafeConfig.swift */,
-				926C746023C36B9B00EA3E0F /* Assets.xcassets */,
-				926C746523C36B9B00EA3E0F /* Info.plist */,
 			);
 			path = "Drive Safe";
-			sourceTree = "<group>";
-		};
-		92EDCEB223C38F16003396DB /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				92EDCEB823C38FBE003396DB /* Custom */,
-				926C746223C36B9B00EA3E0F /* LaunchScreen.storyboard */,
-				926C745D23C36B9900EA3E0F /* Main.storyboard */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		92EDCEB323C38F1D003396DB /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				926C745B23C36B9900EA3E0F /* HomeViewController.swift */,
-				92EDCEBD23C391F6003396DB /* KeepEyesOpenViewController.swift */,
-			);
-			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		92EDCEB423C38F24003396DB /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				92EDCEF123C3A127003396DB /* UserDefaults */,
+				921CE852240BE5AE004DD85A /* View */,
+				928386E8240ABABE0084F4CE /* AVAudioPlayer.swift */,
 				92EDCEB623C38F50003396DB /* MessageAlertController.swift */,
+				92EDCEF223C3A137003396DB /* UserDefaults.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -169,25 +234,15 @@
 		92EDCEB523C38F2A003396DB /* Apllication */ = {
 			isa = PBXGroup;
 			children = (
-				92EDCEFA23C3A508003396DB /* Data */,
-				92EDCEB423C38F24003396DB /* Util */,
-				92EDCEB323C38F1D003396DB /* ViewControllers */,
-				92EDCEB223C38F16003396DB /* Views */,
+				92EDCEFA23C3A508003396DB /* Settings */,
 			);
 			path = Apllication;
-			sourceTree = "<group>";
-		};
-		92EDCEB823C38FBE003396DB /* Custom */ = {
-			isa = PBXGroup;
-			children = (
-				92EDCEB923C38FCE003396DB /* SingleCharUITextField.swift */,
-			);
-			path = Custom;
 			sourceTree = "<group>";
 		};
 		92EDCEC123C3956A003396DB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				926C746023C36B9B00EA3E0F /* Assets.xcassets */,
 				92EDCEBF23C39562003396DB /* alarm.wav */,
 			);
 			path = Resources;
@@ -196,7 +251,7 @@
 		92EDCEC723C39655003396DB /* Drive SafeTests */ = {
 			isa = PBXGroup;
 			children = (
-				92EDCED023C396CF003396DB /* Application */,
+				92EFC6ED24027FAC00FA68B5 /* Sources */,
 				92EDCEEF23C3993D003396DB /* Util */,
 				92EDCECA23C39655003396DB /* Info.plist */,
 				92EDCEF023C39999003396DB /* Drive_SafeTests-Bridging-header.h */,
@@ -204,20 +259,21 @@
 			path = "Drive SafeTests";
 			sourceTree = "<group>";
 		};
-		92EDCED023C396CF003396DB /* Application */ = {
+		92EDCED023C396CF003396DB /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				92EDCED123C396D7003396DB /* ViewControllers */,
+				92EDCED123C396D7003396DB /* Home */,
+				92EFC6EE24027FE200FA68B5 /* Keep Eyes Open */,
 			);
-			path = Application;
+			path = Features;
 			sourceTree = "<group>";
 		};
-		92EDCED123C396D7003396DB /* ViewControllers */ = {
+		92EDCED123C396D7003396DB /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				92EDCEC823C39655003396DB /* HomeViewControllerTest.swift */,
 			);
-			path = ViewControllers;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		92EDCED223C39930003396DB /* ViewControllerPresentationSpy */ = {
@@ -247,29 +303,47 @@
 		92EDCEEF23C3993D003396DB /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				92EDCEF623C3A2A3003396DB /* MockUserDefaults.swift */,
+				928386EA240ABB4F0084F4CE /* AVAudioPlayerMock.swift */,
+				921CE84E240BE4B4004DD85A /* FlickeringViewMock.swift */,
 				92EDCEF823C3A2FD003396DB /* TestHelpers.swift */,
+				92EDCEF623C3A2A3003396DB /* UserDefaultsMock.swift */,
 				92EDCED223C39930003396DB /* ViewControllerPresentationSpy */,
 			);
 			path = Util;
 			sourceTree = "<group>";
 		};
-		92EDCEF123C3A127003396DB /* UserDefaults */ = {
+		92EDCEFA23C3A508003396DB /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				92EDCEF223C3A137003396DB /* UserDefaultsProtocol.swift */,
-				92EDCEF423C3A143003396DB /* UserDefaults+Ext.swift */,
+				92EDCEFB23C3A512003396DB /* Settings.swift */,
 			);
-			path = UserDefaults;
+			path = Settings;
 			sourceTree = "<group>";
 		};
-		92EDCEFA23C3A508003396DB /* Data */ = {
+		92EFC6ED24027FAC00FA68B5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				92EDCEFB23C3A512003396DB /* DriveSafeDAO.swift */,
-				92EDCEFD23C3A51A003396DB /* DriveSafeDAOImpl.swift */,
+				92EDCED023C396CF003396DB /* Features */,
 			);
-			path = Data;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		92EFC6EE24027FE200FA68B5 /* Keep Eyes Open */ = {
+			isa = PBXGroup;
+			children = (
+				92B37D3B2401B31C00846AD9 /* KeepEyesOpenViewControllerTest.swift */,
+				928386EC240ABD4A0084F4CE /* SettingsMock.swift */,
+				92EFC6EF24027FF200FA68B5 /* Detector */,
+			);
+			path = "Keep Eyes Open";
+			sourceTree = "<group>";
+		};
+		92EFC6EF24027FF200FA68B5 /* Detector */ = {
+			isa = PBXGroup;
+			children = (
+				92EFC6F02402801900FA68B5 /* EyeDetectorSpy.swift */,
+			);
+			path = Detector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,15 +449,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				921CE851240BE570004DD85A /* FlickeringView.swift in Sources */,
 				92EDCEBC23C391A5003396DB /* DriveSafeConfig.swift in Sources */,
 				926C745C23C36B9900EA3E0F /* HomeViewController.swift in Sources */,
-				92EDCEFE23C3A51A003396DB /* DriveSafeDAOImpl.swift in Sources */,
 				92EDCEBE23C391F6003396DB /* KeepEyesOpenViewController.swift in Sources */,
 				92EDCEBA23C38FCE003396DB /* SingleCharUITextField.swift in Sources */,
-				92EDCEFC23C3A513003396DB /* DriveSafeDAO.swift in Sources */,
-				92EDCEF523C3A143003396DB /* UserDefaults+Ext.swift in Sources */,
-				92EDCEF323C3A137003396DB /* UserDefaultsProtocol.swift in Sources */,
+				92EDCEFC23C3A513003396DB /* Settings.swift in Sources */,
+				92EDCEF323C3A137003396DB /* UserDefaults.swift in Sources */,
 				92EDCEB723C38F50003396DB /* MessageAlertController.swift in Sources */,
+				9204886623F0C1BB00DDD57F /* EyeDetector.swift in Sources */,
+				928386E9240ABABF0084F4CE /* AVAudioPlayer.swift in Sources */,
 				926C745A23C36B9900EA3E0F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,16 +468,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				92EDCEE823C39930003396DB /* AlertVerifier.swift in Sources */,
+				92B37D3C2401B31C00846AD9 /* KeepEyesOpenViewControllerTest.swift in Sources */,
+				928386EB240ABB4F0084F4CE /* AVAudioPlayerMock.swift in Sources */,
 				92EDCEE423C39930003396DB /* UIAlertAction+QCOMock.m in Sources */,
-				92EDCEF723C3A2A3003396DB /* MockUserDefaults.swift in Sources */,
+				921CE84F240BE4B4004DD85A /* FlickeringViewMock.swift in Sources */,
+				92EDCEF723C3A2A3003396DB /* UserDefaultsMock.swift in Sources */,
 				92EDCEEB23C39930003396DB /* UIViewController+QCOMock.m in Sources */,
 				92EDCEED23C39930003396DB /* DismissalVerifier.swift in Sources */,
 				92EDCEEE23C39930003396DB /* ClosureContainer.swift in Sources */,
 				92EDCEEA23C39930003396DB /* NSObject+QCOMockAlerts.m in Sources */,
+				92EFC6F12402801900FA68B5 /* EyeDetectorSpy.swift in Sources */,
 				92EDCEE623C39930003396DB /* PresentationVerifier.swift in Sources */,
 				92EDCEF923C3A2FD003396DB /* TestHelpers.swift in Sources */,
 				92EDCEC923C39655003396DB /* HomeViewControllerTest.swift in Sources */,
 				92EDCEE523C39930003396DB /* VerifyHelpers.swift in Sources */,
+				928386ED240ABD4A0084F4CE /* SettingsMock.swift in Sources */,
 				92EDCEEC23C39930003396DB /* QCOMockPopoverPresentationController.m in Sources */,
 				92EDCEE723C39930003396DB /* UIAlertController+QCOMock.m in Sources */,
 			);
@@ -560,7 +640,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BZ82PGH984;
-				INFOPLIST_FILE = "Drive Safe/Info.plist";
+				INFOPLIST_FILE = "Drive Safe/Sources/Main/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -578,7 +658,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BZ82PGH984;
-				INFOPLIST_FILE = "Drive Safe/Info.plist";
+				INFOPLIST_FILE = "Drive Safe/Sources/Main/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -596,15 +676,15 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BZ82PGH984;
-				FRAMEWORK_SEARCH_PATHS = "./Drive\\ SafeTests/";
-				HEADER_SEARCH_PATHS = "./Drive\\ SafeTests/";
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Drive SafeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "./Drive\\ SafeTests/";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "al.dmullaraj.Drive-SafeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./Drive SafeTests/Drive_SafeTests-Bridging-header.h";
@@ -620,15 +700,15 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BZ82PGH984;
-				FRAMEWORK_SEARCH_PATHS = "./Drive\\ SafeTests/";
-				HEADER_SEARCH_PATHS = "./Drive\\ SafeTests/";
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "Drive SafeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "./Drive\\ SafeTests/";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "al.dmullaraj.Drive-SafeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "./Drive SafeTests/Drive_SafeTests-Bridging-header.h";

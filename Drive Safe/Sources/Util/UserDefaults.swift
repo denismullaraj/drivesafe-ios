@@ -12,3 +12,5 @@ protocol UserDefaultsProtocol {
     func set(_ value: Int, forKey defaultName: String)
     func integer(forKey defaultName: String) -> Int
 }
+
+extension UserDefaults: UserDefaultsProtocol {}

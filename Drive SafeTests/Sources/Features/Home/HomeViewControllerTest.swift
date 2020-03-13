@@ -12,7 +12,7 @@ import XCTest
 class HomeViewControllerTest: XCTestCase {
     
     private var sut: HomeViewController!
-    private var mockUserDefaults: MockUserDefaults!
+    private var userDefaultsMock: UserDefaultsMock!
     
     override func setUp() {
         super.setUp()
@@ -20,13 +20,13 @@ class HomeViewControllerTest: XCTestCase {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         sut = sb.instantiateViewController(withIdentifier: String(describing: HomeViewController.self)) as? HomeViewController
         
-        mockUserDefaults = MockUserDefaults()
-        sut.driveSafeDao.userDefaults = mockUserDefaults
+        userDefaultsMock = UserDefaultsMock()
+        sut.settings.userDefaults = userDefaultsMock
     }
     
     override func tearDown() {
         sut = nil
-        mockUserDefaults = nil
+        userDefaultsMock = nil
         
         super.tearDown()
     }
@@ -68,7 +68,7 @@ class HomeViewControllerTest: XCTestCase {
         sut.loadViewIfNeeded()
         
         sut.secondsEyesClosedLimitTextField.insertText("3")
-        XCTAssertEqual(mockUserDefaults.integer(forKey: DriveSafeConfig.SHARED_PREF_EYECLOSED_SECONDS_LIMIT), 3)
+        XCTAssertEqual(userDefaultsMock.integer(forKey: DriveSafeConfig.SHARED_PREF_EYECLOSED_SECONDS_LIMIT), 3)
     }
     
     func test_tapping_EnabledKeepMeSafeButton_redirectsTo_keepEyesOpenViewController() {
