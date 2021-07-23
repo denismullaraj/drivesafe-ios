@@ -23,11 +23,11 @@ class Settings: SettingsProtocol {
         if let secondsText = value, let seconds = Int(secondsText) {
             limitInSecondsToPersist = seconds
         }
-        userDefaults.set(limitInSecondsToPersist, forKey: DriveSafeConfig.SHARED_PREF_EYECLOSED_SECONDS_LIMIT)
+        userDefaults.set(limitInSecondsToPersist, forKey: DriveSafeConfig.PREFERENCES_EYECLOSED_SECONDS_LIMIT)
     }
     
     func getEyeClosedLimitInSeconds() -> Int {
-        var eyeClosedLimitInSeconds = userDefaults.integer(forKey: DriveSafeConfig.SHARED_PREF_EYECLOSED_SECONDS_LIMIT)
+        var eyeClosedLimitInSeconds = userDefaults.integer(forKey: DriveSafeConfig.PREFERENCES_EYECLOSED_SECONDS_LIMIT)
         if eyeClosedLimitInSeconds == 0 {
             eyeClosedLimitInSeconds = getDefaultEyeClosedLimitInSeconds()
         }

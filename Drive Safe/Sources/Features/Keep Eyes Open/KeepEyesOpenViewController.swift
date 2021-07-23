@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 
 class KeepEyesOpenViewController: UIViewController {
+    
     var seconds = 0
     
     lazy var settings: SettingsProtocol = {
@@ -37,45 +38,68 @@ class KeepEyesOpenViewController: UIViewController {
     }()
     
     private var timer: Timer!
+    
     private lazy var limitEyeClosedInSeconds: Int = {
         return settings.getEyeClosedLimitInSeconds()
     }()
+    
     private var alarmFlickeringColor: FlickerRangeColor = {
         return FlickerRangeColor(color1: UIColor.white, color2: UIColor.red)
     }()
     
-    //MARK: ViewController lifecycle
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        eyeDetector.delegate = self
-        
-        flickeringView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(flickeringView)
-        flickeringView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        flickeringView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        flickeringView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        flickeringView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        
-        navigationController?.navigationBar.isTranslucent = false
+        setupNavigationBar()
+        setupMainView()
+        setupEyeDetector()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         eyeDetector.start()
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(processSeconds), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+            self?.processSeconds()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
+        stopTimer()
+    }
+    
+    //MARK: - Helpers
+    
+    private func setupNavigationBar() {
+        navigationController?.navigationBar.isTranslucent = false
+    }
+    
+    private func setupMainView() {
+        flickeringView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(flickeringView)
+        NSLayoutConstraint.activate([
+            flickeringView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            flickeringView.topAnchor.constraint(equalTo: view.topAnchor),
+            flickeringView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            flickeringView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+    
+    private func setupEyeDetector() {
+        eyeDetector.delegate = self
+    }
+    
+    private func stopTimer() {
         timer?.invalidate()
         timer = nil
         seconds = 0
     }
-    
-    @objc func processSeconds() {
+
+    @objc private func processSeconds() {
         seconds += 1
     }
 }

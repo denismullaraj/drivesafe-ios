@@ -68,7 +68,7 @@ class HomeViewControllerTest: XCTestCase {
         sut.loadViewIfNeeded()
         
         sut.secondsEyesClosedLimitTextField.insertText("3")
-        XCTAssertEqual(userDefaultsMock.integer(forKey: DriveSafeConfig.SHARED_PREF_EYECLOSED_SECONDS_LIMIT), 3)
+        XCTAssertEqual(userDefaultsMock.integer(forKey: DriveSafeConfig.PREFERENCES_EYECLOSED_SECONDS_LIMIT), 3)
     }
     
     func test_tapping_EnabledKeepMeSafeButton_redirectsTo_keepEyesOpenViewController() {

@@ -8,11 +8,11 @@
 
 import ARKit
 
-protocol EyeDetectorDelegate: class {
+protocol EyeDetectorDelegate: AnyObject {
     func eyeBlinkDetected(left: Float, right: Float)
 }
 
-protocol EyeDetectorProtocol: class {
+protocol EyeDetectorProtocol: AnyObject {
     var delegate: EyeDetectorDelegate? { get set }
     func start()
 }
@@ -33,7 +33,7 @@ class EyeDetector: NSObject, ARSessionDelegate, EyeDetectorProtocol {
     
     func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
         if let faceAnchor = anchors.first as? ARFaceAnchor {
-            var blendShapes: [ARFaceAnchor.BlendShapeLocation: Any] = faceAnchor.blendShapes
+            let blendShapes: [ARFaceAnchor.BlendShapeLocation: Any] = faceAnchor.blendShapes
             
             guard let eyeBlinkLeft = blendShapes[.eyeBlinkLeft] as? Float else { return }
             guard let eyeBlinkRight = blendShapes[.eyeBlinkRight] as? Float else { return }

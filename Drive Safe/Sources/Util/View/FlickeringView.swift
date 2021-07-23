@@ -15,7 +15,7 @@ struct FlickerRangeColor {
     let color2: UIColor
 }
 
-protocol FlickeringProtocol: class {
+protocol FlickeringProtocol: AnyObject {
     func startFlickeringBackground(between colors: FlickerRangeColor)
     func stopFlickering(with resetColor: UIColor)
 }

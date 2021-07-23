@@ -37,7 +37,6 @@ class HomeViewController: UIViewController {
         hideKeyboard()
     }
     
-   
     @IBAction func keepMeSafeTapped(_ sender: Any) {
         navigationController?.pushViewController(KeepEyesOpenViewController(), animated: true)
     }

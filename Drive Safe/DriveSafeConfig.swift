@@ -11,7 +11,7 @@ import Foundation
 struct DriveSafeConfig {
 
     // Shared Pref
-    static let SHARED_PREF_EYECLOSED_SECONDS_LIMIT = "shared_pref_eyeclosed_seconds_limit"
+    static let PREFERENCES_EYECLOSED_SECONDS_LIMIT = "preferences_eyeclosed_seconds_limit"
     
     // Resources
     static let RESOURCES_AUDIO_ALARM = "alarm.wav"
