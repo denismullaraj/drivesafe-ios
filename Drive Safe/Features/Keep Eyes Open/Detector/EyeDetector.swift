@@ -8,18 +8,16 @@
 
 import ARKit
 
-protocol EyeDetectorDelegate: AnyObject {
-    func eyeBlinkDetected(left: Float, right: Float)
-}
-
 protocol EyeDetectorProtocol: AnyObject {
-    var delegate: EyeDetectorDelegate? { get set }
     func start()
 }
 
 class EyeDetector: NSObject, ARSessionDelegate, EyeDetectorProtocol {
-    private var session = ARSession()
-    weak var delegate: EyeDetectorDelegate?
+    var didDetectEyesClosed: () -> Void = {}
+    var didDetectEyesOpened: () -> Void = {}
+    var didFailEyesDetection: () -> Void = {}
+    
+    private let session = ARSession()
     
     override init() {
         super.init()
@@ -38,7 +36,13 @@ class EyeDetector: NSObject, ARSessionDelegate, EyeDetectorProtocol {
             guard let eyeBlinkLeft = blendShapes[.eyeBlinkLeft] as? Float else { return }
             guard let eyeBlinkRight = blendShapes[.eyeBlinkRight] as? Float else { return }
             
-            delegate?.eyeBlinkDetected(left: eyeBlinkLeft, right: eyeBlinkRight)
+            if eyeBlinkLeft > 0.5, eyeBlinkRight > 0.5 {
+                didDetectEyesClosed()
+            } else if eyeBlinkLeft < 0.025, eyeBlinkRight < 0.025 {
+                didDetectEyesOpened()
+            } else {
+                didFailEyesDetection()
+            }
         }
     }
 }

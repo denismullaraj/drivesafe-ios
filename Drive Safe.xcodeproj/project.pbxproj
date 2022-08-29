@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,16 +12,22 @@
 		921CE851240BE570004DD85A /* FlickeringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921CE850240BE570004DD85A /* FlickeringView.swift */; };
 		926C745A23C36B9900EA3E0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C745923C36B9900EA3E0F /* AppDelegate.swift */; };
 		926C745C23C36B9900EA3E0F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926C745B23C36B9900EA3E0F /* HomeViewController.swift */; };
-		926C745F23C36B9900EA3E0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926C745D23C36B9900EA3E0F /* Main.storyboard */; };
 		926C746123C36B9B00EA3E0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 926C746023C36B9B00EA3E0F /* Assets.xcassets */; };
-		926C746423C36B9B00EA3E0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 926C746223C36B9B00EA3E0F /* LaunchScreen.storyboard */; };
 		928386E9240ABABF0084F4CE /* AVAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928386E8240ABABE0084F4CE /* AVAudioPlayer.swift */; };
 		928386EB240ABB4F0084F4CE /* AVAudioPlayerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928386EA240ABB4F0084F4CE /* AVAudioPlayerMock.swift */; };
 		928386ED240ABD4A0084F4CE /* SettingsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928386EC240ABD4A0084F4CE /* SettingsMock.swift */; };
+		92A6C4AD28BD5DAE00540590 /* PreferencesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6C4AC28BD5DAE00540590 /* PreferencesService.swift */; };
+		92A6C4AF28BD5E4500540590 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6C4AE28BD5E4500540590 /* HomeViewModel.swift */; };
+		92A6C4B128BD5E7000540590 /* KeepEyesOpenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A6C4B028BD5E7000540590 /* KeepEyesOpenViewModel.swift */; };
+		92A6C4BF28BD660800540590 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 92A6C4BE28BD660800540590 /* RxCocoa */; };
+		92A6C4C128BD660800540590 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 92A6C4C028BD660800540590 /* RxSwift */; };
 		92B37D3C2401B31C00846AD9 /* KeepEyesOpenViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B37D3B2401B31C00846AD9 /* KeepEyesOpenViewControllerTest.swift */; };
+		92ED17F728BD213E008792EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ED17F628BD213E008792EE /* SceneDelegate.swift */; };
+		92ED17FA28BD21C5008792EE /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ED17F928BD21C5008792EE /* DependencyContainer.swift */; };
+		92ED17FC28BD222D008792EE /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ED17FB28BD222D008792EE /* ViewControllerFactory.swift */; };
+		92ED17FE28BD2A0A008792EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92ED17FD28BD2A0A008792EE /* LaunchScreen.storyboard */; };
 		92EDCEB723C38F50003396DB /* MessageAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEB623C38F50003396DB /* MessageAlertController.swift */; };
 		92EDCEBA23C38FCE003396DB /* SingleCharUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEB923C38FCE003396DB /* SingleCharUITextField.swift */; };
-		92EDCEBC23C391A5003396DB /* DriveSafeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEBB23C391A5003396DB /* DriveSafeConfig.swift */; };
 		92EDCEBE23C391F6003396DB /* KeepEyesOpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEBD23C391F6003396DB /* KeepEyesOpenViewController.swift */; };
 		92EDCEC023C39563003396DB /* alarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 92EDCEBF23C39562003396DB /* alarm.wav */; };
 		92EDCEC923C39655003396DB /* HomeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEC823C39655003396DB /* HomeViewControllerTest.swift */; };
@@ -36,10 +42,9 @@
 		92EDCEEC23C39930003396DB /* QCOMockPopoverPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEE123C39930003396DB /* QCOMockPopoverPresentationController.m */; };
 		92EDCEED23C39930003396DB /* DismissalVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEE223C39930003396DB /* DismissalVerifier.swift */; };
 		92EDCEEE23C39930003396DB /* ClosureContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEE323C39930003396DB /* ClosureContainer.swift */; };
-		92EDCEF323C3A137003396DB /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEF223C3A137003396DB /* UserDefaults.swift */; };
 		92EDCEF723C3A2A3003396DB /* UserDefaultsMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEF623C3A2A3003396DB /* UserDefaultsMock.swift */; };
 		92EDCEF923C3A2FD003396DB /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEF823C3A2FD003396DB /* TestHelpers.swift */; };
-		92EDCEFC23C3A513003396DB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEFB23C3A512003396DB /* Settings.swift */; };
+		92EDCEFC23C3A513003396DB /* UserDefaultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EDCEFB23C3A512003396DB /* UserDefaultWrapper.swift */; };
 		92EFC6F12402801900FA68B5 /* EyeDetectorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EFC6F02402801900FA68B5 /* EyeDetectorSpy.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,17 +65,21 @@
 		926C745623C36B9900EA3E0F /* Drive Safe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drive Safe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		926C745923C36B9900EA3E0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		926C745B23C36B9900EA3E0F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		926C745E23C36B9900EA3E0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		926C746023C36B9B00EA3E0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		926C746323C36B9B00EA3E0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		926C746523C36B9B00EA3E0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		928386E8240ABABE0084F4CE /* AVAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioPlayer.swift; sourceTree = "<group>"; };
 		928386EA240ABB4F0084F4CE /* AVAudioPlayerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAudioPlayerMock.swift; sourceTree = "<group>"; };
 		928386EC240ABD4A0084F4CE /* SettingsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMock.swift; sourceTree = "<group>"; };
+		92A6C4AC28BD5DAE00540590 /* PreferencesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesService.swift; sourceTree = "<group>"; };
+		92A6C4AE28BD5E4500540590 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		92A6C4B028BD5E7000540590 /* KeepEyesOpenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepEyesOpenViewModel.swift; sourceTree = "<group>"; };
 		92B37D3B2401B31C00846AD9 /* KeepEyesOpenViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepEyesOpenViewControllerTest.swift; sourceTree = "<group>"; };
+		92ED17F628BD213E008792EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		92ED17F928BD21C5008792EE /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		92ED17FB28BD222D008792EE /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		92ED17FD28BD2A0A008792EE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92EDCEB623C38F50003396DB /* MessageAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageAlertController.swift; sourceTree = "<group>"; };
 		92EDCEB923C38FCE003396DB /* SingleCharUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCharUITextField.swift; sourceTree = "<group>"; };
-		92EDCEBB23C391A5003396DB /* DriveSafeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveSafeConfig.swift; sourceTree = "<group>"; };
 		92EDCEBD23C391F6003396DB /* KeepEyesOpenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepEyesOpenViewController.swift; sourceTree = "<group>"; };
 		92EDCEBF23C39562003396DB /* alarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alarm.wav; sourceTree = "<group>"; };
 		92EDCEC623C39655003396DB /* Drive SafeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Drive SafeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,10 +103,9 @@
 		92EDCEE223C39930003396DB /* DismissalVerifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissalVerifier.swift; sourceTree = "<group>"; };
 		92EDCEE323C39930003396DB /* ClosureContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureContainer.swift; sourceTree = "<group>"; };
 		92EDCEF023C39999003396DB /* Drive_SafeTests-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Drive_SafeTests-Bridging-header.h"; sourceTree = "<group>"; };
-		92EDCEF223C3A137003396DB /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		92EDCEF623C3A2A3003396DB /* UserDefaultsMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsMock.swift; sourceTree = "<group>"; };
 		92EDCEF823C3A2FD003396DB /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
-		92EDCEFB23C3A512003396DB /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		92EDCEFB23C3A512003396DB /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
 		92EFC6F02402801900FA68B5 /* EyeDetectorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeDetectorSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +114,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A6C4C128BD660800540590 /* RxSwift in Frameworks */,
+				92A6C4BF28BD660800540590 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,49 +129,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9204885D23F0C04C00DDD57F /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				92EDCEB523C38F2A003396DB /* Apllication */,
-				9204885F23F0C07100DDD57F /* Main */,
-				9204886023F0C0BF00DDD57F /* Features */,
-				92EDCEB423C38F24003396DB /* Util */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		9204885F23F0C07100DDD57F /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				926C745923C36B9900EA3E0F /* AppDelegate.swift */,
-				926C745D23C36B9900EA3E0F /* Main.storyboard */,
-				926C746523C36B9B00EA3E0F /* Info.plist */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
 		9204886023F0C0BF00DDD57F /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				9204886123F0C0FA00DDD57F /* Launch */,
 				9204886223F0C10200DDD57F /* Home */,
 				9204886323F0C11400DDD57F /* Keep Eyes Open */,
+				92A6C4AC28BD5DAE00540590 /* PreferencesService.swift */,
 			);
 			path = Features;
-			sourceTree = "<group>";
-		};
-		9204886123F0C0FA00DDD57F /* Launch */ = {
-			isa = PBXGroup;
-			children = (
-				926C746223C36B9B00EA3E0F /* LaunchScreen.storyboard */,
-			);
-			path = Launch;
 			sourceTree = "<group>";
 		};
 		9204886223F0C10200DDD57F /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				926C745B23C36B9900EA3E0F /* HomeViewController.swift */,
+				92A6C4AE28BD5E4500540590 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -170,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				92EDCEBD23C391F6003396DB /* KeepEyesOpenViewController.swift */,
+				92A6C4B028BD5E7000540590 /* KeepEyesOpenViewModel.swift */,
 				9204886423F0C1B500DDD57F /* Detector */,
 			);
 			path = "Keep Eyes Open";
@@ -213,11 +196,22 @@
 		926C745823C36B9900EA3E0F /* Drive Safe */ = {
 			isa = PBXGroup;
 			children = (
-				9204885D23F0C04C00DDD57F /* Sources */,
-				92EDCEC123C3956A003396DB /* Resources */,
-				92EDCEBB23C391A5003396DB /* DriveSafeConfig.swift */,
+				92EDCEFA23C3A508003396DB /* Settings */,
+				92EDCEB523C38F2A003396DB /* Application */,
+				9204886023F0C0BF00DDD57F /* Features */,
+				92EDCEB423C38F24003396DB /* Util */,
 			);
 			path = "Drive Safe";
+			sourceTree = "<group>";
+		};
+		92ED17F828BD216E008792EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				926C746523C36B9B00EA3E0F /* Info.plist */,
+				926C746023C36B9B00EA3E0F /* Assets.xcassets */,
+				92EDCEBF23C39562003396DB /* alarm.wav */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		92EDCEB423C38F24003396DB /* Util */ = {
@@ -226,26 +220,22 @@
 				921CE852240BE5AE004DD85A /* View */,
 				928386E8240ABABE0084F4CE /* AVAudioPlayer.swift */,
 				92EDCEB623C38F50003396DB /* MessageAlertController.swift */,
-				92EDCEF223C3A137003396DB /* UserDefaults.swift */,
+				92EDCEFB23C3A512003396DB /* UserDefaultWrapper.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
 		};
-		92EDCEB523C38F2A003396DB /* Apllication */ = {
+		92EDCEB523C38F2A003396DB /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				92EDCEFA23C3A508003396DB /* Settings */,
+				92ED17F828BD216E008792EE /* Resources */,
+				926C745923C36B9900EA3E0F /* AppDelegate.swift */,
+				92ED17F628BD213E008792EE /* SceneDelegate.swift */,
+				92ED17F928BD21C5008792EE /* DependencyContainer.swift */,
+				92ED17FB28BD222D008792EE /* ViewControllerFactory.swift */,
+				92ED17FD28BD2A0A008792EE /* LaunchScreen.storyboard */,
 			);
-			path = Apllication;
-			sourceTree = "<group>";
-		};
-		92EDCEC123C3956A003396DB /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				926C746023C36B9B00EA3E0F /* Assets.xcassets */,
-				92EDCEBF23C39562003396DB /* alarm.wav */,
-			);
-			path = Resources;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		92EDCEC723C39655003396DB /* Drive SafeTests */ = {
@@ -315,7 +305,6 @@
 		92EDCEFA23C3A508003396DB /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				92EDCEFB23C3A512003396DB /* Settings.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -362,6 +351,10 @@
 			dependencies = (
 			);
 			name = "Drive Safe";
+			packageProductDependencies = (
+				92A6C4BE28BD660800540590 /* RxCocoa */,
+				92A6C4C028BD660800540590 /* RxSwift */,
+			);
 			productName = "Drive Safe";
 			productReference = 926C745623C36B9900EA3E0F /* Drive Safe.app */;
 			productType = "com.apple.product-type.application";
@@ -412,6 +405,9 @@
 				Base,
 			);
 			mainGroup = 926C744D23C36B9900EA3E0F;
+			packageReferences = (
+				92A6C4BD28BD660800540590 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 926C745723C36B9900EA3E0F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -427,10 +423,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				926C746423C36B9B00EA3E0F /* LaunchScreen.storyboard in Resources */,
 				926C746123C36B9B00EA3E0F /* Assets.xcassets in Resources */,
+				92ED17FE28BD2A0A008792EE /* LaunchScreen.storyboard in Resources */,
 				92EDCEC023C39563003396DB /* alarm.wav in Resources */,
-				926C745F23C36B9900EA3E0F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,16 +445,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				921CE851240BE570004DD85A /* FlickeringView.swift in Sources */,
-				92EDCEBC23C391A5003396DB /* DriveSafeConfig.swift in Sources */,
+				92ED17FC28BD222D008792EE /* ViewControllerFactory.swift in Sources */,
 				926C745C23C36B9900EA3E0F /* HomeViewController.swift in Sources */,
 				92EDCEBE23C391F6003396DB /* KeepEyesOpenViewController.swift in Sources */,
 				92EDCEBA23C38FCE003396DB /* SingleCharUITextField.swift in Sources */,
-				92EDCEFC23C3A513003396DB /* Settings.swift in Sources */,
-				92EDCEF323C3A137003396DB /* UserDefaults.swift in Sources */,
+				92EDCEFC23C3A513003396DB /* UserDefaultWrapper.swift in Sources */,
+				92ED17FA28BD21C5008792EE /* DependencyContainer.swift in Sources */,
+				92A6C4AD28BD5DAE00540590 /* PreferencesService.swift in Sources */,
 				92EDCEB723C38F50003396DB /* MessageAlertController.swift in Sources */,
+				92A6C4AF28BD5E4500540590 /* HomeViewModel.swift in Sources */,
 				9204886623F0C1BB00DDD57F /* EyeDetector.swift in Sources */,
 				928386E9240ABABF0084F4CE /* AVAudioPlayer.swift in Sources */,
 				926C745A23C36B9900EA3E0F /* AppDelegate.swift in Sources */,
+				92ED17F728BD213E008792EE /* SceneDelegate.swift in Sources */,
+				92A6C4B128BD5E7000540590 /* KeepEyesOpenViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,25 +496,6 @@
 			targetProxy = 92EDCECB23C39655003396DB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		926C745D23C36B9900EA3E0F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				926C745E23C36B9900EA3E0F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		926C746223C36B9B00EA3E0F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				926C746323C36B9B00EA3E0F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		926C746623C36B9B00EA3E0F /* Debug */ = {
@@ -639,8 +619,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BZ82PGH984;
-				INFOPLIST_FILE = "Drive Safe/Sources/Main/Info.plist";
+				DEVELOPMENT_TEAM = BLPNB63PSV;
+				INFOPLIST_FILE = "Drive Safe/Application/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -657,8 +638,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BZ82PGH984;
-				INFOPLIST_FILE = "Drive Safe/Sources/Main/Info.plist";
+				DEVELOPMENT_TEAM = BLPNB63PSV;
+				INFOPLIST_FILE = "Drive Safe/Application/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -749,6 +731,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		92A6C4BD28BD660800540590 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		92A6C4BE28BD660800540590 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92A6C4BD28BD660800540590 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		92A6C4C028BD660800540590 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 92A6C4BD28BD660800540590 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 926C744E23C36B9900EA3E0F /* Project object */;
 }

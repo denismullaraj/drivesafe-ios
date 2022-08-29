@@ -11,23 +11,14 @@ import AVFoundation
 
 class KeepEyesOpenViewController: UIViewController {
     
+    var viewIsReady: () -> Void = {}
+    
     var seconds = 0
-    
-    lazy var settings: SettingsProtocol = {
-        return Settings()
-    }()
-    
-    var eyeDetector: EyeDetectorProtocol = {
-        return EyeDetector()
-    }()
-    
-    var flickeringView: FlickeringViewProtocol = {
-        return FlickeringView(backgroundColor: UIColor.blue)
-    }()
+    var flickeringView: FlickeringViewProtocol = FlickeringView(backgroundColor: UIColor.blue)
     
     var avPlayer: AVAudioPlayerProtocol? = {
         do {
-            guard let path = Bundle.main.path(forResource: DriveSafeConfig.RESOURCES_AUDIO_ALARM, ofType:nil) else { fatalError("No alarm sound found!") }
+            guard let path = Bundle.main.path(forResource: "alarm.wav", ofType:nil) else { fatalError("No alarm sound found!") }
             
             let url = URL(fileURLWithPath: path)
             
@@ -39,28 +30,34 @@ class KeepEyesOpenViewController: UIViewController {
     
     private var timer: Timer!
     
-    private lazy var limitEyeClosedInSeconds: Int = {
-        return settings.getEyeClosedLimitInSeconds()
-    }()
-    
     private var alarmFlickeringColor: FlickerRangeColor = {
         return FlickerRangeColor(color1: UIColor.white, color2: UIColor.red)
     }()
     
+    private let viewmodel: KeepEyesOpenViewModel
+    
     //MARK: - Lifecycle
     
+    init(viewmodel: KeepEyesOpenViewModel) {
+        self.viewmodel = viewmodel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupNavigationBar()
         setupMainView()
-        setupEyeDetector()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        eyeDetector.start()
+        viewIsReady()
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
             self?.processSeconds()
         }
@@ -70,6 +67,22 @@ class KeepEyesOpenViewController: UIViewController {
         super.viewWillDisappear(animated)
         
         stopTimer()
+    }
+    
+    func playAlarmIfNeeded() {
+        if seconds >= viewmodel.preferences.maxTimeEyesCanBeClosed {
+            avPlayer?.play()
+            flickeringView.startFlickeringBackground(between: alarmFlickeringColor)
+        }
+    }
+    
+    func stopAlarm() {
+        resetTimer()
+        flickeringView.stopFlickering(with: UIColor.blue)
+    }
+    
+    func resetTimer() {
+        seconds = 0
     }
     
     //MARK: - Helpers
@@ -89,10 +102,6 @@ class KeepEyesOpenViewController: UIViewController {
         ])
     }
     
-    private func setupEyeDetector() {
-        eyeDetector.delegate = self
-    }
-    
     private func stopTimer() {
         timer?.invalidate()
         timer = nil
@@ -101,27 +110,5 @@ class KeepEyesOpenViewController: UIViewController {
 
     @objc private func processSeconds() {
         seconds += 1
-    }
-}
-
-
-// MARK: Face detection
-extension KeepEyesOpenViewController: EyeDetectorDelegate {
-    func eyeBlinkDetected(left: Float, right: Float) {
-        process(left, right)
-    }
-    
-    private func process(_ eyeBlinkLeft: Float, _ eyeBlinkRight: Float) {
-        if eyeBlinkLeft > 0.5, eyeBlinkRight > 0.5 {
-            if seconds >= limitEyeClosedInSeconds {
-                avPlayer?.play()
-                flickeringView.startFlickeringBackground(between: alarmFlickeringColor)
-            }
-        } else if eyeBlinkLeft < 0.025, eyeBlinkRight < 0.025 {
-            seconds = 0
-            flickeringView.stopFlickering(with: UIColor.blue)
-        } else {
-            seconds = 0
-        }
     }
 }
