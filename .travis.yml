@@ -1,8 +1,0 @@
-language: swift
-osx_image: xcode12.5
-xcode_project: Drive Safe.xcodeproj
-xcode_scheme: Drive Safe
-matrix:
-  include:
-    - xcode_destination: platform=iOS Simulator,OS=12.4,name=iPhone X
-    - xcode_destination: platform=iOS Simulator,OS=14.5,name=iPhone 12
